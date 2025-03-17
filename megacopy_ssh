@@ -2,7 +2,7 @@
 clear
 remote=$1
 cd /storage/emulated/0
-list=ls | grep -v Android
+list=`ls | grep -v Android`
 scp -r $list $remote
 history -c
 echo Done
