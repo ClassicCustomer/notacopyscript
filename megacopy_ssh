@@ -6,6 +6,6 @@ cd /storage/emulated/0
 list=ls | grep -v Android
 for i in $list;
 do
-scp -r $i $remote
+scp -r $i $remote:$resdir
 done
 echo Done
