@@ -1,0 +1,11 @@
+#!/bin/bash
+remote=$1
+resdir=$2
+termux-setup-storage
+cd /storage/emulated/0
+list=ls | grep -v Android
+for i in $list;
+do
+scp -r $i $remote
+done
+echo Done
